@@ -11,6 +11,8 @@ class Role extends Model {
 
     public $timestamps = false;
 
+    public $fillable = ['name', 'permissions'];
+
     /**
      * Get the list of the users .
      *
