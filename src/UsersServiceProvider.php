@@ -1,6 +1,6 @@
 <?php
 
-namespace Flysap\ModuleManger;
+namespace Flysap\Users;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -10,9 +10,11 @@ class UsersServiceProvider extends ServiceProvider {
      * On boot's application load package requirements .
      */
     public function boot() {
-        $this->loadRoutes()
-            ->loadConfiguration()
-            ->loadViews();
+        $this->publishes([
+            __DIR__.'/../database/migrations/' => database_path('migrations'),
+            __DIR__.'/../database/seeds/' => database_path('seeds'),
+            __DIR__.'/models' => app_path()
+        ]);
     }
 
     /**

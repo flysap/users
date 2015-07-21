@@ -35,6 +35,11 @@ class AddRolesTable extends Migration {
             $table->engine = 'InnoDB';
             $table->primary(['user_id', 'role_id']);
         });
+
+        Schema::table('users', function(Blueprint $table) {
+           $table->text('permissions')
+               ->after('password');
+        });
     }
 
     /**
@@ -45,5 +50,9 @@ class AddRolesTable extends Migration {
     public function down() {
         Schema::drop('roles');
         Schema::drop('role_users');
+
+        Schema::table('users', function(Blueprint $table) {
+           $table->dropColumn('permissions');
+        });
     }
 }

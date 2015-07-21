@@ -1,6 +1,6 @@
 <?php
 
-namespace Flysap\Users;
+namespace Flysap\Users\Models;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;

@@ -4,7 +4,7 @@ namespace Flysap\Users;
 
 trait HasPermissions {
 
-    /**
+        /**
      * Get the list of the roles .
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
