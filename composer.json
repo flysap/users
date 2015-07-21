@@ -1,0 +1,20 @@
+{
+    "name": "flysap/users",
+    "description": "SMG",
+    "require": {
+        "symfony/yaml": "~2.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Radu",
+            "email": "radu.bordei89@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Flysap\\Users\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
