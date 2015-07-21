@@ -1,6 +1,8 @@
 <?php
 
-namespace Flysap\Users;
+namespace Flysap\Users\Traits;
+
+use Flysap\Users\Models\Role;
 
 trait HasPermissions {
 
